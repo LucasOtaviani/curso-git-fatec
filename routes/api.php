@@ -13,4 +13,7 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+Route::get('/posts', 'PostsController@index');
+Route::get('/posts/{post}', 'PostsController@show');
 Route::post('/posts/create', 'PostsController@create');
+Route::patch('/post/{post}/update', 'PostsController@update');
