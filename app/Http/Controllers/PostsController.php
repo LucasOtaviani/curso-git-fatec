@@ -26,6 +26,12 @@ class PostsController
         ]);
     }
 
+    public function delete(Post $post): Response
+    {
+        $post->delete();
+        return response("Publicação \"{$post->title}\" deletado com sucesso!", 200);
+    }
+
     public function update(Post $post, Request $request): Response
     {
         $post->update([

@@ -13,7 +13,8 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+Route::post('/posts/create', 'PostsController@create');
+Route::delete('/post/{post}/delete', 'PostsController@delete');
 Route::get('/posts', 'PostsController@index');
 Route::get('/posts/{post}', 'PostsController@show');
-Route::post('/posts/create', 'PostsController@create');
 Route::patch('/post/{post}/update', 'PostsController@update');
