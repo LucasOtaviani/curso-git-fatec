@@ -9,5 +9,10 @@ use Illuminate\Http\Response;
 
 class PostsController
 {
-
+    public function create(Request $request) {
+        return Post::create([
+            'title' => $request->title,
+            'text' => $request->text,
+        ]);
+    }
 }
