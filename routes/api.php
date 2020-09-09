@@ -14,3 +14,4 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::post('/posts/create', 'PostsController@create');
+Route::delete('/post/{post}/delete', 'PostsController@delete');

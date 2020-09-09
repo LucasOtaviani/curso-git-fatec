@@ -15,4 +15,10 @@ class PostsController
             'text' => $request->text,
         ]);
     }
+
+    public function delete(Post $post): Response
+    {
+        $post->delete();
+        return response("Publicação \"{$post->title}\" deletado com sucesso!", 200);
+    }
 }
